@@ -1,0 +1,78 @@
+
+{% load static %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- SWGOH CSS   -->
+    <link rel="stylesheet" type="text/css" href="{% static 'TWhelper/formated.css' %}">
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- Navbar -->
+    {% include "TWhelper/navbar.html" %}
+
+    <title>Equipas</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1><br /> Equipas </h1>
+
+        <a class="nav-item" href="{% url 'TWhelper-teams' %}">Retroceder</a>
+            <ul class="list-group media-list media-list-stream m-t-0">
+                <legend class="border-bottom mb-4">Editar</legend>
+                {% for team in teams_test %}
+                    <li class="media list-group-item p-a">
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 text-center">
+                            {% include "TWhelper/toon_portrait.html" with toon=team.toon1%}
+
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 text-center">
+                            {% include "TWhelper/toon_portrait.html" with toon=team.toon2%}
+
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 text-center">
+                            {% include "TWhelper/toon_portrait.html" with toon=team.toon3%}
+
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 text-center">
+                            {% include "TWhelper/toon_portrait.html" with toon=team.toon4%}
+
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 text-center">
+                            {% include "TWhelper/toon_portrait.html" with toon=team.toon5%}
+
+                        </div>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 text-center">
+                            <h3><strong>GP: {{ team.Totalgp }} <br /><br /><br /><strong></h3>
+
+                            <button name="editar" class="btn btn-secondary center-block" onclick="window.location.href='{% url 'TWhelper-teamsupdate' pk=team.id %}'" %}>&nbsp;Editar&nbsp;</button>
+                            <button name="apagar" class="btn btn-danger center-block" onclick="window.location.href='{% url 'TWhelper-teamsdelete' pk=team.id %}'" %}>Apagar</button>
+
+                        </div>
+                    </liv>
+                {% endfor %}
+                </ul>
+        <button name="add" class="btn btn-primary center-block" onclick="window.location.href='{% url 'TWhelper-teamscreate' %}'">Adicionar</button><br /><br />
+    </div>
+
+    <script src="{% static 'js/main.js' %}" type="text/javascript"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

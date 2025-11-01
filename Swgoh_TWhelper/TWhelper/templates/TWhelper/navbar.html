@@ -1,0 +1,58 @@
+{% block portrait %}
+
+{% load static %}
+{% load staticfiles %}
+{% load admin_urls %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="http://allfont.net/allfont.css?fonts=star-jedi" rel="stylesheet" type="text/css" crossorigin="anonymous"/>
+<link rel="stylesheet" type="text/css" href="{% static 'TWhelper/navb.css' %}">
+
+    <nav class="navbar-inverse fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-logo" href="#">
+                    KNiGHTFALL Prj <!--PRoJECT-->
+                </a>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="topNavBar">
+                <ul class="navbar-header">
+                    <a class="navbar-brand" href="{% url 'logout' %}">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;
+                        Logout
+                    </a>
+                </ul>
+                {% if perms.TWhelper.User %}
+                <ul class="navbar-header navbar-right">
+                    <a class="navbar-brand" href="{% url 'admin:index' %}">
+                        Admin
+                    </a>
+                </ul>
+                <ul class="navbar-header navbar-right">
+                    <a class="navbar-brand" href="{% url 'TWhelper-mandalorians' %}">
+                        Mandalorians (TW-eq)
+                    </a>
+                </ul>
+                {% endif %}
+                <ul class="navbar-header navbar-right">
+                    <a class="navbar-brand" href="{% url 'change-password' %}">
+                        Change Password
+                    </a>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+{% endblock %}

@@ -1,0 +1,166 @@
+.player-squad-detail-squad {
+	overflow: auto
+}
+
+.player-squad-detail-squad-stats strong {
+	font-size: 18px
+}
+
+@media (min-width:1025px) {
+	.player-squad-detail .player-character {
+		margin-right: 26px
+	}
+}
+
+.player-squad-detail .player-character .pc-statmods {
+	min-height: 36px
+}
+
+.player-squad-detail .player-character .zeta-container {
+	margin: 10px 0;
+	min-height: 30px
+}
+
+.player-squad-detail .player-character .zeta-container img {
+	width: 30px;
+	display: inline-block;
+	border-radius: 4px;
+	margin-right: 3px
+}
+
+.player-squad-list {
+	overflow: auto
+}
+
+.player-squad-list-squad .panel {
+	display: block;
+	height: 155px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: -30px;
+	padding: 20px
+}
+
+@media (max-width:768px) {
+	.player-squad-list-squad .panel {
+		height: 115px;
+		padding: 8px 20px
+	}
+}
+
+.player-squad-list-squad .panel p {
+	text-decoration: none;
+	color: #666;
+	font-size: 13.5px;
+	font-weight: 400
+}
+
+.player-squad-list-squad .panel p.squad-members {
+	margin: 6px 0 2px
+}
+
+.player-squad-list-squad .panel h4 {
+	color: #555;
+	font-size: 20px;
+	font-weight: 400;
+	border-bottom: 1px solid #ccc;
+	margin: 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 360px
+}
+
+@media (max-width:1025px) {
+	.player-squad-list-squad .panel h4 {
+		max-width: 290px
+	}
+}
+
+.player-squad-list-squad .panel h4 small {
+	display: block;
+	margin-top: 5px;
+	color: #666;
+	font-size: 13.5px;
+	font-weight: 400
+}
+
+.player-squad-list-squad .panel img.squad-image-small {
+	width: 40px;
+	border-radius: 4px
+}
+
+.player-squad-list-squad .panel img.squad-image-small:first-child {
+	width: 60px;
+	vertical-align: top
+}
+
+.player-squad-create form a:active,
+.player-squad-create form a:focus,
+.player-squad-create form a:hover {
+	text-decoration: none
+}
+
+.player-squad-create-slot {
+	margin: 0 10px;
+	display: inline-block
+}
+
+
+@media (max-width:1025px) {
+	.player-squad-create-slot {
+		width: 17%;
+		margin: 0 3px
+	}
+}
+
+@media (max-width: 600px) {
+	.player-squad-create-slot {
+		width: 40%;
+		margin: 0 3px
+	}
+}
+
+.player-squad-create-slot a {
+	height: 140px;
+	border-radius: 10px;
+	border: 3px solid #356398;
+	display: block;
+	background-size: cover;
+	background-image: url(/static/TWhelper/img/tex.abilityui_passive_stealth.png);
+	position: relative;
+	transition: all .25s
+}
+
+.player-squad-create-slot a p {
+	font-size: 11px;
+	padding: 3px 0;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	font-weight: 700;
+	background-color: rgba(0, 0, 0, .5)
+}
+
+@media (max-width:1025px) {
+	.player-squad-create-slot a {
+		height: 58px;
+		border-radius: 10px
+	}
+}
+
+.player-squad-create-slot a.leader {
+	background-image: url(/static/TWhelper/img/tex.abilityui_leader_default.png)
+}
+
+.player-squad-create-slot a:hover {
+	border-color: #76a4da
+}
+
+.player-squad-create-slot a.filled:hover {
+	border-color: #bd2222;
+	opacity: .6
+}

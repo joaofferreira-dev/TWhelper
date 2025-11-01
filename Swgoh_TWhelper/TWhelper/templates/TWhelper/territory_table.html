@@ -1,0 +1,35 @@
+{% block territory_table %}
+                    <div class="col col-lg-3 text-center">
+                        <legend class="border-bottom mb-4" style="width: 200%">{{ territory }}</legend>
+                        <table class="table table-striped" id="{{ territory }}" style="width: 50%">
+                            <thead>
+                                <tr id="list-header">
+                                    <th data-data="pk" data-name="pk" id="pk" data-sortable="false" data-visible="false" data-searchable="false">ID</th>
+                                    <th data-data="toon1" data-name="toon1.name" id="toon1" data-sortable="true" data-visible="true" data-searchable="true">Toon1(L)</th>
+                                    <th data-data="toon1.num_zetas" data-name="toon1.num_zetas" id="toon1.num_zetas" data-sortable="false" data-visible="false" data-searchable="false">Zetas</th>
+                                    <th data-data="toon1.speed" data-name="toon1.speed" id="toon1.speed" data-sortable="false" data-visible="false" data-searchable="false">Speed</th>
+                                    <th data-data="toon2" data-name="toon2.name" id="toon2" data-sortable="false" data-visible="false">Toon2</th>
+                                    <th data-data="toon2.num_zetas" data-name="toon2.num_zetas" id="toon2.num_zetas" data-sortable="false" data-visible="false" data-searchable="false">Zetas</th>
+                                    <th data-data="toon2.speed" data-name="toon2.speed" id="toon2.speed" data-sortable="false" data-visible="false" data-searchable="false">Speed</th>
+                                    <th data-data="toon3" data-name="toon3.name" id="toon3" data-sortable="false" data-visible="false">Toon3</th>
+                                    <th data-data="toon3.num_zetas" data-name="toon3.num_zetas" id="toon3.num_zetas" data-sortable="false" data-visible="false" data-searchable="false">Zetas</th>
+                                    <th data-data="toon3.speed" data-name="toon3.speed" id="toon3.speed" data-sortable="false" data-visible="false" data-searchable="false">Speed</th>
+                                    <th data-data="toon4" data-name="toon4.name" id="toon4" data-sortable="false" data-visible="false">Toon4</th>
+                                    <th data-data="toon4.num_zetas" data-name="toon4.num_zetas" id="toon4.num_zetas" data-sortable="false" data-visible="false" data-searchable="false">Zetas</th>
+                                    <th data-data="toon4.speed" data-name="toon4.speed" id="toon4.speed" data-sortable="false" data-visible="false" data-searchable="false">Speed</th>
+                                    <th data-data="toon5" data-name="toon5.name" id="toon5" data-sortable="false" data-visible="false" data-searchable="false">Toon5</th>
+                                    <th data-data="toon5.num_zetas" data-name="toon5.num_zetas" id="toon5.num_zetas" data-sortable="false" data-visible="false" data-searchable="false">Zetas</th>
+                                    <th data-data="toon5.speed" data-name="toon5.speed" id="toon5.speed" data-sortable="false" data-visible="false" data-searchable="false">Speed</th>
+                                    <th data-data="Totalgp" data-name="Totalgp" id="Totalgp" data-sortable="false" data-visible="false" data-searchable="false">GP</th>
+                                    <th data-data="date_posted" data-name="date_posted" id="date_posted" data-sortable="false" data-visible="false" data-searchable="false">Date</th>
+                                    <th data-data="author" data-name="author" id="author" data-sortable="false" data-visible="false" data-searchable="false">Player_ID</th>
+                                    <th data-data="author_username" data-name="author_username" id="author_username" data-sortable="true" data-visible="true" data-searchable="true">Player</th>
+                                    <th data-data="assignment" data-name="assignment" id="assignment" data-sortable="false" data-visible="false" data-searchable="false">Assign</th>
+                                    <th scope="col" data-sortable="false" data-searchable="false">Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+{% endblock %}

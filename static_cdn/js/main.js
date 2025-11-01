@@ -1,0 +1,4 @@
+
+$(document).ready(function() {
+    $('.django-select2').select2();
+});

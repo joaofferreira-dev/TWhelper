@@ -1,0 +1,53 @@
+
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sleek Login Form</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel="stylesheet" href="{% static 'TWhelper/style.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <h1> Home </h1>
+  <form class="login-form" method="POST">
+      {% csrf_token %}
+  <p class="login-text">
+   <span class="fa-stack fa-lg">
+     <i class="fa fa-circle fa-stack-2x"></i>
+     <i class="fa fa-lock fa-stack-1x"></i>
+   </span>
+  </p>
+
+  {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+  {% endif %}
+
+  {% render_field form.username class+="form-control login-username" autofocus="true" required="true" placeholder="Username" %}
+  {% render_field form.password class+="form-control login-password" autofocus="true" required="true" placeholder="Password" %}
+
+  <input type="submit" name="Login" value="Login" class="login-submit" />
+</form>
+<div class="underlay-photo"></div>
+<a href="{% url 'register' %}" class="login-forgot-pass">Registar</a>
+<div class="underlay-black"></div>
+
+
+
+</body>
+
+</html>

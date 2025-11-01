@@ -1,0 +1,25 @@
+
+.navbar-logo {
+  font-family: 'Star Jedi', arial;
+  font-size: 25px;
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  line-height: 20px;
+  text-shadow: 1px 1px 1px #aaa;
+}
+
+.navbar-inverse .navbar-logo {
+  color: #9d9d9d;
+}
+
+.navbar-inverse .navbar-logo:hover,
+.navbar-inverse .navbar-logo:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navbar-logo:hover,
+.navbar-logo:focus {
+  text-decoration: none;
+}

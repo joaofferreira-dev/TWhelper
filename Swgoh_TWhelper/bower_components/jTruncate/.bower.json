@@ -1,0 +1,26 @@
+{
+  "name": "jTruncate",
+  "description": "Simple text truncate with options by show full text in templates",
+  "keywords": [
+    "jquery",
+    "truncate",
+    "front-end",
+    "web"
+  ],
+  "homepage": "https://github.com/fndmiranda/jTruncate",
+  "main": "dist/truncate.js",
+  "ignore": [],
+  "dependencies": {
+    "jquery": ">= 1.7.1"
+  },
+  "_release": "27a3efca2a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "27a3efca2a26586b81f7b3c98290ab712b6575ab"
+  },
+  "_source": "https://github.com/fndmiranda/jTruncate.git",
+  "_target": "*",
+  "_originalSource": "jtruncate",
+  "_direct": true
+}

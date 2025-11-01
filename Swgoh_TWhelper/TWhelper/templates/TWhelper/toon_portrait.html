@@ -1,0 +1,211 @@
+{% block portrait %}
+
+{% load static %}
+{% load staticfiles %}
+                            <div class="collection-char">
+                                <!--::before-->
+                                {% if toon.gear_level == 13 and toon.forceAlignment == "DARK" %}
+                                    <div class="player-char-portrait char-portrait-full char-portrait-full-gear-t13 char-portrait-full-alignment-dark-side">
+                                        <div class="char-portrait-full-gear"></div>
+                                        <img class="char-portrait-full-img loading" src="{% get_static_prefix %}TWhelper/img/toon_portraits/{{ toon.name }}" alt="{{ toon.name }}" height="80" width="80">
+                                            {% if toon.star_level >= 1 %}
+                                                <div class="star star1"></div>
+                                            {% else %}
+                                                <div class="star star1 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 2 %}
+                                                <div class="star star2"></div>
+                                            {% else %}
+                                                <div class="star star2 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 3 %}
+                                                <div class="star star3"></div>
+                                            {% else %}
+                                                <div class="star star3 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 4 %}
+                                                <div class="star star4"></div>
+                                            {% else %}
+                                                <div class="star star4 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 5 %}
+                                                <div class="star star5"></div>
+                                            {% else %}
+                                                <div class="star star5 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 6 %}
+                                                <div class="star star6"></div>
+                                            {% else %}
+                                                <div class="star star6 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 7 %}
+                                                <div class="star star7"></div>
+                                            {% else %}
+                                                <div class="star star7 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.num_zetas > 0 %}
+                                                <div class="char-portrait-full-zeta">{{ toon.num_zetas }}</div>
+                                            {% endif %}
+
+                                        <div class="char-portrait-full-relic">{{ toon.relic_level }}</div>
+                                        <div class="char-portrait-full-level">{{ toon.level }}</div>
+                                    </div>
+                                    <h4 class="truncate-name">{{ toon.name }}</h4>
+                                    <h5>{{ toon.gp }}</h5>
+                                    <h5>Speed: {{ toon.speed }}</h5>
+                                    <!--{% if toon.num_zetas > 0 %}
+                                        <h5>Zetas:</h5>
+                                            {% for zeta in toon.zeta_abs.all %}
+                                                <h5>{{ zeta }}</h5>
+                                            {% endfor %}
+                                    {% endif %}
+                                    -->
+                                    <!--::after-->
+                                </div>
+
+                                {% elif toon.gear_level == 13 and toon.forceAlignment == "LIGHT" %}
+                                    <div class="player-char-portrait char-portrait-full char-portrait-full-gear-t13 char-portrait-full-alignment-light-side">
+                                        <div class="char-portrait-full-gear"></div>
+                                        <img class="char-portrait-full-img loading" src="{% get_static_prefix %}TWhelper/img/toon_portraits/{{ toon.name }}" alt="{{ toon.name }}" height="80" width="80">
+                                            {% if toon.star_level >= 1 %}
+                                                <div class="star star1"></div>
+                                            {% else %}
+                                                <div class="star star1 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 2 %}
+                                                <div class="star star2"></div>
+                                            {% else %}
+                                                <div class="star star2 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 3 %}
+                                                <div class="star star3"></div>
+                                            {% else %}
+                                                <div class="star star3 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 4 %}
+                                                <div class="star star4"></div>
+                                            {% else %}
+                                                <div class="star star4 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 5 %}
+                                                <div class="star star5"></div>
+                                            {% else %}
+                                                <div class="star star5 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 6 %}
+                                                <div class="star star6"></div>
+                                            {% else %}
+                                                <div class="star star6 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 7 %}
+                                                <div class="star star7"></div>
+                                            {% else %}
+                                                <div class="star star7 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.num_zetas > 0 %}
+                                                <div class="char-portrait-full-zeta">{{ toon.num_zetas }}</div>
+                                            {% endif %}
+
+                                        <div class="char-portrait-full-relic">{{ toon.relic_level }}</div>
+                                        <div class="char-portrait-full-level">{{ toon.level }}</div>
+                                    </div>
+                                    <h4 class="truncate-name">{{ toon.name }}</h4>
+                                    <h5>{{ toon.gp }}</h5>
+                                    <h5>Speed: {{ toon.speed }}</h5>
+                                <!--    {% if toon.num_zetas > 0 %}
+                                        <h5>Zetas:</h5>
+                                            {% for zeta in toon.zeta_abs.all %}
+                                                <h5>{{ zeta }}</h5>
+                                            {% endfor %}
+                                    {% endif %}
+                                -->
+
+                                    <!--::after-->
+                                </div>
+
+                                {% else %}
+                                    <div class="player-char-portrait char-portrait-full char-portrait-full-gear-t{{ toon.gear_level }}">
+                                        <div class="char-portrait-full-gear"></div>
+                                        <img class="char-portrait-full-img loading" src="{% get_static_prefix %}TWhelper/img/toon_portraits/{{ toon.name }}" alt="{{ toon.name }}" height="80" width="80">
+                                            {% if toon.star_level >= 1 %}
+                                                <div class="star star1"></div>
+                                            {% else %}
+                                                <div class="star star1 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 2 %}
+                                                <div class="star star2"></div>
+                                            {% else %}
+                                                <div class="star star2 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 3 %}
+                                                <div class="star star3"></div>
+                                            {% else %}
+                                                <div class="star star3 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 4 %}
+                                                <div class="star star4"></div>
+                                            {% else %}
+                                                <div class="star star4 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 5 %}
+                                                <div class="star star5"></div>
+                                            {% else %}
+                                                <div class="star star5 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 6 %}
+                                                <div class="star star6"></div>
+                                            {% else %}
+                                                <div class="star star6 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.star_level >= 7 %}
+                                                <div class="star star7"></div>
+                                            {% else %}
+                                                <div class="star star7 star-inactive"></div>
+                                            {% endif %}
+                                            {% if toon.num_zetas > 0 %}
+                                                <div class="char-portrait-full-zeta">{{ toon.num_zetas }}</div>
+                                            {% endif %}
+                                            <div class="char-portrait-full-level">{{ toon.level }}</div>
+                                            <div class="char-portrait-full-gear-level">
+                                                {% if toon.gear_level == 1 %}
+                                                    I
+                                                {% elif toon.gear_level == 2 %}
+                                                    II
+                                                {% elif toon.gear_level == 3 %}
+                                                    III
+                                                {% elif toon.gear_level == 4 %}
+                                                    IV
+                                                {% elif toon.gear_level == 5 %}
+                                                    V
+                                                {% elif toon.gear_level == 6 %}
+                                                    VI
+                                                {% elif toon.gear_level == 7 %}
+                                                    VII
+                                                {% elif toon.gear_level == 8 %}
+                                                    VIII
+                                                {% elif toon.gear_level == 9 %}
+                                                    IX
+                                                {% elif toon.gear_level == 10 %}
+                                                    X
+                                                {% elif toon.gear_level == 11 %}
+                                                    XI
+                                                {% elif toon.gear_level == 12 %}
+                                                    XII
+                                                {% endif%}
+                                            </div>
+                                        </div>
+                                        <h4 class="truncate-name">{{ toon.name }}</h4>
+                                        <h5>{{ toon.gp }}</h5>
+                                        <h5>Speed: {{ toon.speed }}</h5>
+                                    <!--    {% if toon.num_zetas > 0 %}
+                                            <h5>Zetas:</h5>
+                                                {% for zeta in toon.zeta_abs.all %}
+                                                    <h5>{{ zeta }}</h5>
+                                                {% endfor %}
+                                        {% endif %}
+                                    -->
+                                    <!--::after-->
+                                    </div>
+                                {% endif %}
+
+{% endblock %}
