@@ -4,4 +4,5 @@ Developed for **private use** , locally deployed and customized for real guild p
 Initially planned to interface with discord, feature not pursued by officer preference. 
 
 **Status : Archived** 
+
 Secrets, access tokens, datasets and media files were **purged**. This repo is for **code review only**, not intended to run as-is.
