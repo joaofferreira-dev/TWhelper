@@ -9,7 +9,7 @@ Secrets, access tokens, datasets and media files were **purged**. This repo is f
 
 App uses Django and rest framework for assynchonous tasks(update database).
 
-Tech stack: Python, Django, REST framework, bootstrap.
+**Tech stack**: Python, Django, REST framework, bootstrap.
 
 Adequate recovery behaviours for update not implemented.
 
