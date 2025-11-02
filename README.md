@@ -1,7 +1,7 @@
 # TWhelper
-Leightwheight tool I built to help guild officers coordinate territory wars in SWGOH.
+Leightwheight tool I built to help guild officers coordinate territory wars in **SWGOH**.
 Developed for **private use** , locally deployed and customized for real guild planning. Designed to streamline team assignments and strategic planning during competitive events. Used for 6 months until replaced by a third party commercial tool.
-Initially planned to interface with discord, feature not pursued by officer preference. 
+Initially planned to interface with discord, feature not pursued by officer preference. Built with a strong emphasis on ease of use. 
 
 **Status : Archived** 
 
