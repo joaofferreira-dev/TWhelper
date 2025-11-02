@@ -8,6 +8,7 @@ Initially planned to interface with discord, feature not pursued by officer pref
 Secrets, access tokens, datasets and media files were **purged**. This repo is for **code review only**, not intended to run as-is.
 
 App uses Django and rest framework for assynchonous tasks(update database).
+Adequate recovery behaviours for update not implemented.
 
 Preview of website usage:
 
