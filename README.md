@@ -12,6 +12,8 @@ Adequate recovery behaviours for update not implemented.
 
 Preview of website usage:
 
+<img width="640" height="360" alt="image0 (2)" src="https://github.com/user-attachments/assets/1fa6223a-0582-42ec-b0c7-b7a0a5a27416" />
+
 <img width="640" height="360" alt="image0 (1)" src="https://github.com/user-attachments/assets/24401098-9760-4c66-a831-6ed88c100ef2" />
 
 <img width="1920" height="1080" alt="image1 (1)" src="https://github.com/user-attachments/assets/b052e0bf-cbc2-474c-80ac-586b9b56bfc2" />
